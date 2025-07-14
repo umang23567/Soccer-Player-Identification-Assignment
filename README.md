@@ -34,7 +34,7 @@ This project detects and tracks players, referees, and the ball from a soccer vi
 
 ```bash
 git clone https://github.com/umang23567/Soccer-Player-Identification-Assignment.git
-cd soccer-tracking
+cd Soccer-Player-Identification-Assignment
 ```
 
 ### 2. Create a virtual environment (recommended)
