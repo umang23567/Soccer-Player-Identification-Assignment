@@ -1,8 +1,13 @@
-# Soccer-Player-Identification-Assignment
+# ⚽ Soccer-Player-Identification-Assignment
 
-This project detects and tracks players, referees, and the ball from a soccer video using YOLOv8 and ByteTrack. The final output is an annotated video showing tracked objects with bounding ellipses and IDs.
+This project detects and tracks players, referees, and the ball from a soccer video using **YOLOv8** and **ByteTrack**. The final output is an annotated video showing tracked objects with bounding ellipses and player IDs.
 
-Directory Structure
+---
+
+## 📁 Directory Structure
+
+```
+.
 ├── main.py                     # Main entry point
 ├── model.pt                    # YOLO model 
 ├── 15sec_input_720p.mp4        # Input soccer video
@@ -19,30 +24,79 @@ Directory Structure
 ├── analysis.ipynb              # (Optional) Notebook for analysis
 ├── .gitattributes
 └── README.md
+```
 
-Installation & Setup
-1. Clone the repository
+---
+
+## 🔧 Installation & Setup
+
+### 1. Clone the repository
+
+```bash
 git clone https://github.com/your-username/soccer-tracking.git
 cd soccer-tracking
-2. Create a virtual environment (recommended)
+```
+
+### 2. Create a virtual environment (recommended)
+
+```bash
 python -m venv venv
 source venv/bin/activate  # On Windows: venv\Scripts\activate
-3. Install dependencies
-Create and use this requirements.txt:
+```
+
+### 3. Install dependencies
+
+Create a `requirements.txt` file with the following content:
+
+```
 ultralytics>=8.0.20
 supervision>=0.12.0
 opencv-python
-numpy<2.0  # Ensure compatibility with older binary modules
-Install with:
+numpy<2.0
+```
+
+Then install the packages:
+
+```bash
 pip install -r requirements.txt
-▶️ How to Run
-Ensure the following files are present:
-15sec_input_720p.mp4 — input video
-model.pt — YOLOv8 model file
-Then run:
+```
+
+---
+
+## ▶️ How to Run
+
+Ensure the following files are present in the root directory:
+
+- `15sec_input_720p.mp4` — input video
+- `model.pt` — YOLOv8 model file
+
+Then run the main script:
+
+```bash
 python main.py
-This will:
-Load the video
-Detect and track objects
-Annotate frames with ellipses and IDs
-Save the output to: output_videos/output.mp4
+```
+
+### This will:
+
+- Load the video
+- Detect and track objects (players, referee, ball)
+- Annotate frames with bounding ellipses and IDs
+- Save the final output to `output_videos/output.mp4`
+
+---
+
+## 📌 Notes
+
+- Uses cached tracking data from `stubs/track_stubs.pkl` if available (for faster reruns).
+- Replace the video or model file as needed — just update the path in `main.py`.
+- Goalkeepers are relabeled as players during post-processing.
+
+---
+
+## ✏️ Optional
+
+- Use `analysis.ipynb` for further exploration or visualization.
+- Modify `draw_annotations()` or `draw_ellipse()` in `tracker.py` for different overlay styles.
+
+---
+
