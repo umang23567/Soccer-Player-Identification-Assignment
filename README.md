@@ -46,16 +46,7 @@ source venv/bin/activate  # On Windows: venv\Scripts\activate
 
 ### 3. Install dependencies
 
-Create a `requirements.txt` file with the following content:
-
-```
-ultralytics>=8.0.20
-supervision>=0.12.0
-opencv-python
-numpy<2.0
-```
-
-Then install the packages:
+Install the packages:
 
 ```bash
 pip install -r requirements.txt
