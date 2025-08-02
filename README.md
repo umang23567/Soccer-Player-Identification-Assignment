@@ -1,6 +1,6 @@
 # ⚽ Soccer-Player-Identification-Assignment
 
-This project detects and tracks players, referees, and the ball from a soccer video using **YOLOv8** and **ByteTrack**. The final output is an annotated video showing tracked objects with bounding ellipses and player IDs.
+This project detects and tracks players, referees, and the ball from a soccer video using **YOLOv11** and **ByteTrack**. The final output is an annotated video showing tracked objects with bounding ellipses and player IDs.
 
 ---
 
